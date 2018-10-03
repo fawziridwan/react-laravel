@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router";
+import PropTypes from "prop-types";
 
 class EditItem extends Component {
     constructor(props) {

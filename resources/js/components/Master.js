@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router, Route, Link } from "react-router";
+import PropTypes from "prop-types";
 
 class Master extends Component {
     render() {

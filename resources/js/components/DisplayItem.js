@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router";
 import TableRow from "./TableRow";
+import PropTypes from "prop-types";
 
 class DisplayItem extends Component {
     constructor(props) {

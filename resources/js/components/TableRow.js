@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, browserHistory } from "react-router";
+import PropTypes from "prop-types";
 
 class TableRow extends Component {
     constructor(props) {

@@ -17222,7 +17222,8 @@ Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MOD
         __WEBPACK_IMPORTED_MODULE_2_react_router__["Route"],
         { path: "/", component: __WEBPACK_IMPORTED_MODULE_4__components_Master__["a" /* default */] },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["Route"], { path: "/add-item", component: __WEBPACK_IMPORTED_MODULE_5__components_CreateItem__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["Route"], { path: "/display-item", component: DisplayItem })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["Route"], { path: "/display-item", component: DisplayItem }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["Route"], { path: "/edit/:id", component: EditItem })
     )
 ), document.getElementById("example"));
 

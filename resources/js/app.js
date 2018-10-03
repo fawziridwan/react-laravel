@@ -22,6 +22,7 @@ render(
         <Route path="/" component={Master}>
             <Route path="/add-item" component={CreateItem} />
             <Route path="/display-item" component={DisplayItem} />
+            <Route path="/edit/:id" component={EditItem} />
         </Route>
     </Router>,
     document.getElementById("example")

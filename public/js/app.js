@@ -62992,13 +62992,47 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var CreateItem = function (_Component) {
     _inherits(CreateItem, _Component);
 
-    function CreateItem() {
+    function CreateItem(props) {
         _classCallCheck(this, CreateItem);
 
-        return _possibleConstructorReturn(this, (CreateItem.__proto__ || Object.getPrototypeOf(CreateItem)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (CreateItem.__proto__ || Object.getPrototypeOf(CreateItem)).call(this, props));
+
+        _this.state = { productName: "", productPrice: "" };
+
+        _this.handleChange1 = _this.handleChange1.bind(_this);
+        _this.handleChange2 = _this.handleChange2.bind(_this);
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
+        return _this;
     }
 
     _createClass(CreateItem, [{
+        key: "handleChange1",
+        value: function handleChange1(e) {
+            this.setState({
+                productName: e.target.value
+            });
+        }
+    }, {
+        key: "handleChange2",
+        value: function handleChange2(e) {
+            this.setState({
+                productPrice: e.target.value
+            });
+        }
+    }, {
+        key: "handleSubmit",
+        value: function handleSubmit(e) {
+            e.preventDefault();
+            var products = {
+                name: this.state.productName,
+                price: this.state.productPrice
+            };
+            var uri = "http://localhost:8000/items";
+            axios.post(url, products).then(function (response) {
+                // browserHistory.push('/display-item');
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -63023,7 +63057,11 @@ var CreateItem = function (_Component) {
                                 null,
                                 "Item Name: "
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", className: "form-control" })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                                type: "text",
+                                className: "form-control",
+                                onChange: this.handleChange1
+                            })
                         )
                     )
                 ),
@@ -63041,7 +63079,11 @@ var CreateItem = function (_Component) {
                                 null,
                                 "Item Price: "
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", className: "form-control" })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                                type: "text",
+                                className: "form-control",
+                                onChange: this.handleChange2
+                            })
                         )
                     )
                 ),
